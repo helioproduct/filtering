@@ -87,21 +87,3 @@ def prewitt_filter(path_to_image):
     edges = cv2.addWeighted(edges_horizontal, 0.5, edges_vertical, 0.5, 0)
 
     return edges
-
-
-path_to_image = "./image.png"
-
-# filtered_image = sharpening_filter(path_to_image)
-# filtered_image = gaussian_filter(path_to_image, 51)
-# filtered_image = smoothing_filter(path_to_image, 51)
-# filtered_image = increase_contrast(path_to_image)
-# filtered_image = sobel_filter(path_to_image)
-filtered_image = prewitt_filter(path_to_image)
-
-# показать ихображение
-plt.imshow(cv2.cvtColor(filtered_image, cv2.COLOR_BGR2RGB))
-plt.show()
-
-
-# сохранить изображение
-# cv2.imwrite("./filtered_image.jpg", filtered_image)
