@@ -18,5 +18,5 @@ def hyperbolic_blur(x, y, k):
     return (x-1)**2*(k*x+k+1)/(k+1)/(k*x+1)
 
 ''' kernel_size >= 5 * sigma'''
-def log_sharpen(x, y, sigma):
+def log_sharp(x, y, sigma):
     return (x**2 + y**2 - 2 * sigma**2) / sigma**4 * np.exp(-(x**2 + y**2)/(2*sigma**2))
